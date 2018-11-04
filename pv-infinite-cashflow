@@ -1,0 +1,13 @@
+  def pv_inf_cf():
+    while True:
+        cf = input("Please enter the cash flow numeric value\n e.g. if it is $1,000 then enter 1000: ")
+        r =  input("\nPlease enter the interest rate\ne.g. if it is 5% then enter 5: ")
+        try:
+            pv = int(cf)/(1-int(r)/100)
+            return round(pv,2)
+            break
+        except:
+            print("\nValues entered are wrong. Try again")
+            continue
+x = pv_inf_cf()
+print("\n"+ str(x))
