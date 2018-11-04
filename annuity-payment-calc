@@ -1,0 +1,13 @@
+while True:
+    try:
+        loan_amount = float(input("Please enter the loan value in numbers: "))
+        interest_rate = float(input("What's the interest rate: "))
+        time = int(input("What's the tenure of the loan: "))
+        r = round(1/(1+interest_rate/100),5)
+        r_raised = round(r**(time),5)
+        emi = (loan_amount*(1-r))/(1-r_raised)
+        print("Your emi is", round(emi,2))
+        break
+    except:
+        print("Values entered are incorrect. Try again\n")
+        continue
